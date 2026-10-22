@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -17,31 +18,6 @@ function isActive(pathname: string, href: string) {
   return pathname.startsWith(href);
 }
 
-function Mark() {
-  return (
-    <svg
-      width="28"
-      height="28"
-      viewBox="0 0 32 32"
-      aria-hidden="true"
-      className="shrink-0"
-    >
-      <path
-        d="M16 3.5 27 12.5 16 28.5 5 12.5 16 3.5Z"
-        fill="#064e3b"
-        stroke="#d4af37"
-        strokeWidth="1.2"
-      />
-      <path d="M5 12.5h22" stroke="#d4af37" strokeWidth="1" />
-      <path
-        d="M16 3.5 11.5 12.5 16 28.5 20.5 12.5 16 3.5Z"
-        fill="#10b981"
-        opacity="0.7"
-      />
-    </svg>
-  );
-}
-
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -49,8 +25,15 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0a0a0a]/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between gap-3 px-4 sm:px-6">
-        <Link href="/" className="flex min-w-0 items-center gap-3" onClick={() => setOpen(false)}>
-          <Mark />
+        <Link href="/" className="flex min-w-0 items-center gap-2.5 sm:gap-3" onClick={() => setOpen(false)}>
+          <Image
+            src="/brand/emerald-mark.jpg"
+            alt=""
+            width={700}
+            height={590}
+            priority
+            className="h-11 w-auto shrink-0 sm:h-14"
+          />
           <span className="min-w-0 leading-none">
             <span className="block font-serif text-base tracking-[0.18em] text-white sm:text-lg sm:tracking-[0.24em]">
               EMERALD
