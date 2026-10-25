@@ -20,7 +20,7 @@ export function EmailAddress({ variant = "compact", className = "" }: EmailAddre
   return (
     <a href={`mailto:${CONTACT_EMAIL}`} className={`${variantClass[variant]} ${className}`}>
       {local}
-      {/* Used only when the narrow-screen fallback allows wrapping. */}
+      {/* Preferred wrap point. Footer always allows it; other variants only when narrow. */}
       {domain ? <wbr /> : null}
       {domain}
     </a>
