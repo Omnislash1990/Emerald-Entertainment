@@ -31,10 +31,14 @@ function ThankYou({ onReset }: { onReset: () => void }) {
   return (
     <div className="mt-8 border border-[#d4af37]/40 bg-black/30 p-6" role="status">
       <p className="font-serif text-2xl text-white">Thank you.</p>
-      <p className="mt-3 text-sm leading-relaxed text-zinc-300">
+      <p className="contact-email mt-3 text-sm leading-relaxed text-zinc-300">
         Your email app should now open with your enquiry. If it didn&apos;t, email{" "}
-        <a className="text-[#d4af37] hover:text-white" href={`mailto:${CONTACT_EMAIL}`}>
-          {CONTACT_EMAIL}
+        <a
+          className="contact-email text-[#d4af37] hover:text-white"
+          href={`mailto:${CONTACT_EMAIL}`}
+        >
+          {CONTACT_EMAIL.split("@")[0]}@<wbr />
+          {CONTACT_EMAIL.split("@")[1]}
         </a>{" "}
         directly.
       </p>
