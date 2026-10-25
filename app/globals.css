@@ -22,14 +22,60 @@ body {
   color: #0a0a0a;
 }
 
-/* Long contact addresses must wrap inside narrow columns and flex rows. */
-.contact-email {
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+/* Width context for the mailto clamp. The slot is a block, so cqi is the
+   column width rather than the address itself. */
+.email-slot {
+  container-type: inline-size;
+}
+
+.email-address,
+.email-address-feature {
+  max-width: 100%;
+  min-width: 0;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+/* 4.45cqi keeps a ~20.2em address (the long mailto) on one line in Inter. */
+.email-address {
+  display: inline-block;
+  font-size: clamp(0.625rem, 4.45cqi, 0.875rem);
+}
+
+.email-address-feature {
+  display: block;
+  width: fit-content;
+  font-size: clamp(0.625rem, 4.45cqi, 1.5rem);
+}
+
+/* Footer is centered in a row from sm up, so size it from the viewport
+   instead of a shrink-wrapped container. */
+.email-address-footer {
+  display: inline-block;
+  max-width: 100%;
+  min-width: 0;
+  line-height: 1.35;
+  white-space: nowrap;
+  font-size: clamp(0.75rem, 3.7vw, 0.875rem);
+}
+
+@container (max-width: 13rem) {
+  .email-address,
+  .email-address-feature {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 18rem) {
+  .email-address-footer {
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 }
