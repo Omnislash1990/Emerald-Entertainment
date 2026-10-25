@@ -23,14 +23,17 @@ export default function ContactPage() {
           Email{" "}
           <a
             href={`mailto:${CONTACT_EMAIL}`}
-            className="font-serif text-lg text-[#d4af37] underline decoration-[#d4af37]/40 underline-offset-4 transition-colors hover:text-white sm:text-2xl"
+            className="contact-email inline-block max-w-full font-serif text-lg text-[#d4af37] underline decoration-[#d4af37]/40 underline-offset-4 transition-colors hover:text-white sm:text-2xl"
           >
             <span className="sm:hidden">
               {CONTACT_EMAIL.split("@")[0]}@
               <br />
               {CONTACT_EMAIL.split("@")[1]}
             </span>
-            <span className="hidden sm:inline">{CONTACT_EMAIL}</span>
+            <span className="hidden sm:inline">
+              {CONTACT_EMAIL.split("@")[0]}@<wbr />
+              {CONTACT_EMAIL.split("@")[1]}
+            </span>
           </a>
         </p>
         <ContactPanels />

@@ -17,9 +17,10 @@ export function Footer() {
         </div>
         <a
           href={`mailto:${CONTACT_EMAIL}`}
-          className="break-all text-sm text-[#d4af37] transition-colors hover:text-white sm:break-normal"
+          className="contact-email w-full min-w-0 max-w-full text-sm text-[#d4af37] transition-colors hover:text-white sm:w-auto"
         >
-          {CONTACT_EMAIL}
+          {CONTACT_EMAIL.split("@")[0]}@<wbr />
+          {CONTACT_EMAIL.split("@")[1]}
         </a>
         <p className="text-xs tracking-wide text-zinc-500">
           © 2026 {SITE_NAME}. All rights reserved.
