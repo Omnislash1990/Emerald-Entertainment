@@ -54,27 +54,22 @@ body {
   font-size: clamp(0.625rem, 4.45cqi, 1.5rem);
 }
 
-/* Footer is centered in a row from sm up, so size it from the viewport
-   instead of a shrink-wrapped container. */
+/* Footer address lives in a minmax(0, 1fr) column. Break after @ when the
+   line does not fit; overflow-wrap:anywhere is the fallback so the local
+   part cannot paint outside the column. */
 .email-address-footer {
   display: inline-block;
   max-width: 100%;
   min-width: 0;
   line-height: 1.35;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
   font-size: clamp(0.75rem, 3.7vw, 0.875rem);
 }
 
 @container (max-width: 13rem) {
   .email-address,
   .email-address-feature {
-    white-space: normal;
-    overflow-wrap: anywhere;
-  }
-}
-
-@media (max-width: 18rem) {
-  .email-address-footer {
     white-space: normal;
     overflow-wrap: anywhere;
   }
