@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ContactPanels } from "@/components/ContactPanels";
+import { EmailAddress } from "@/components/EmailAddress";
 import { PageHeader } from "@/components/PageHeader";
-import { CONTACT_EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -19,20 +19,10 @@ export default function ContactPage() {
       />
 
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
-        <p className="mb-10 text-sm text-zinc-400">
-          Email{" "}
-          <a
-            href={`mailto:${CONTACT_EMAIL}`}
-            className="font-serif text-lg text-[#d4af37] underline decoration-[#d4af37]/40 underline-offset-4 transition-colors hover:text-white sm:text-2xl"
-          >
-            <span className="sm:hidden">
-              {CONTACT_EMAIL.split("@")[0]}@
-              <br />
-              {CONTACT_EMAIL.split("@")[1]}
-            </span>
-            <span className="hidden sm:inline">{CONTACT_EMAIL}</span>
-          </a>
-        </p>
+        <div className="email-slot mb-10 text-left">
+          <p className="text-[11px] uppercase tracking-[0.2em] text-zinc-400">Email</p>
+          <EmailAddress variant="feature" />
+        </div>
         <ContactPanels />
       </div>
     </>

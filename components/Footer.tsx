@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
+import { EmailAddress } from "@/components/EmailAddress";
+import { SITE_NAME } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -15,12 +16,7 @@ export function Footer() {
             className="h-auto w-full"
           />
         </div>
-        <a
-          href={`mailto:${CONTACT_EMAIL}`}
-          className="break-all text-sm text-[#d4af37] transition-colors hover:text-white sm:break-normal"
-        >
-          {CONTACT_EMAIL}
-        </a>
+        <EmailAddress variant="footer" />
         <p className="text-xs tracking-wide text-zinc-500">
           © 2026 {SITE_NAME}. All rights reserved.
         </p>

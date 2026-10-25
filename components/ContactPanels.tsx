@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { EmailAddress } from "@/components/EmailAddress";
 import { goldButtonClass } from "@/components/GoldButton";
 import { CONTACT_EMAIL } from "@/lib/site";
 
@@ -31,12 +32,9 @@ function ThankYou({ onReset }: { onReset: () => void }) {
   return (
     <div className="mt-8 border border-[#d4af37]/40 bg-black/30 p-6" role="status">
       <p className="font-serif text-2xl text-white">Thank you.</p>
-      <p className="mt-3 text-sm leading-relaxed text-zinc-300">
+      <p className="email-slot mt-3 text-sm leading-relaxed text-zinc-300">
         Your email app should now open with your enquiry. If it didn&apos;t, email{" "}
-        <a className="text-[#d4af37] hover:text-white" href={`mailto:${CONTACT_EMAIL}`}>
-          {CONTACT_EMAIL}
-        </a>{" "}
-        directly.
+        <EmailAddress /> directly.
       </p>
       <button
         type="button"
