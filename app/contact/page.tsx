@@ -12,11 +12,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <PageHeader
-        eyebrow="Contact"
-        title="Start a conversation"
-        subtitle="Client bookings and performer submissions are read by the same team."
-      />
+      <PageHeader eyebrow="Contact" title="Start a conversation" />
 
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
         <div className="email-slot mb-10 text-left">

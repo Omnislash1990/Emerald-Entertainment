@@ -62,18 +62,14 @@ const tiles = [
     src: "/gallery/live-entertainment.jpg",
     alt: "Live entertainment poster with a sparkler performer and act thumbnails",
     caption: "Live Entertainment",
-    className: "aspect-[4/5]",
+    className: "aspect-[3/4]",
   },
 ];
 
 export default function PortfolioPage() {
   return (
     <>
-      <PageHeader
-        eyebrow="Selected work"
-        title="Portfolio"
-        subtitle="Residencies, productions, and nights across hotels, resorts, and live rooms."
-      />
+      <PageHeader eyebrow="Selected work" title="Portfolio" />
 
       <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
         <FadeIn>
@@ -81,7 +77,7 @@ export default function PortfolioPage() {
             {tiles.map((tile) => (
               <li
                 key={tile.src}
-                className={`relative mb-4 w-full break-inside-avoid overflow-hidden ${tile.className}`}
+                className={`relative mb-4 w-full min-w-0 max-w-full break-inside-avoid overflow-hidden ${tile.className}`}
               >
                 <Image
                   src={tile.src}
@@ -89,6 +85,7 @@ export default function PortfolioPage() {
                   fill
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   className="object-cover object-top"
+                  style={{ objectFit: "cover" }}
                 />
                 <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-4 pb-4 pt-12 text-[11px] uppercase tracking-[0.22em] text-white">
                   {tile.caption}

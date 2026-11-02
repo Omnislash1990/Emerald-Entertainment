@@ -86,8 +86,7 @@ function ClientForm() {
 
   return (
     <section className="border border-white/10 bg-emerald-900 p-6 sm:p-10">
-      <p className="text-[11px] uppercase tracking-[0.3em] text-[#d4af37]">For venues</p>
-      <h2 className="mt-3 font-serif text-3xl text-white">Client Enquiries</h2>
+      <h2 className="font-serif text-3xl text-white">Client Enquiries</h2>
       <p className="mt-3 text-sm leading-relaxed text-emerald-50">
         Hotels, resorts, private hosts, and nightlife rooms.
       </p>

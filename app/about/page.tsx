@@ -6,7 +6,7 @@ import { PageHeader } from "@/components/PageHeader";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "The vision behind Emerald Entertainment Group: industry experience, original ideas, and a single team from first conversation to final night.",
+    "At Emerald Entertainment Group, our vision is to redefine live entertainment through exceptional creativity, world-class talent and unforgettable experiences.",
 };
 
 const sections = [
@@ -17,8 +17,10 @@ const sections = [
     src: "/gallery/fire-performer.jpg",
     alt: "Fire performer breathing a plume of flame on a dark stage",
     paragraphs: [
-      "Emerald is built by people who have worked inside hotels, resorts, and live rooms, not only around them. We understand call times, sightlines, guest flow, and the standard a front office expects when entertainment carries the brand.",
-      "That experience shows up in the details: a cast that can hold a six-night week, a show that fits the room you actually have, and a team that speaks clearly with banqueting, recreation, and the general manager.",
+      "With over a decade of experience across the international entertainment industry, Emerald Entertainment Group is founded on a wealth of knowledge gained from working with prestigious cruise lines, international hotel resorts and professional theatrical productions.",
+      "Our expertise extends across performance, choreography, creative direction, entertainment management and full-scale production.",
+      "Having experienced the industry both on stage and behind the scenes, we understand what it takes to deliver exceptional entertainment, from the initial concept and casting process through to rehearsals, production and the final performance.",
+      "This experience allows us to combine artistic excellence with professional organisation, ensuring every event is delivered with confidence, precision and the highest standards.",
     ],
   },
   {
@@ -28,8 +30,11 @@ const sections = [
     src: "/gallery/show-dancers.jpg",
     alt: "Show dancers in feathered costumes under purple stage light",
     paragraphs: [
-      "The brief is the beginning, not a template. We develop original formats, unexpected casting, and staging that could only belong to that property, whether the night is a quiet lobby performance or a full production.",
-      "Limits are a design problem. Budget, space, and audience shape the idea. They do not shrink it. The work should feel considered, and it should feel like it could not have come from anywhere else.",
+      "At Emerald Entertainment Group, creativity is at the heart of everything we do.",
+      "We believe entertainment should be more than simply a performance. It should create an atmosphere, tell a story and leave audiences with memories that last long after the event.",
+      "From spectacular theatrical productions and immersive experiences to bespoke themed events and specialist performances, we approach every project with fresh ideas, imagination and artistic ambition.",
+      "No two occasions are the same. We work closely with our clients to develop entertainment that reflects their vision, complements their venue and exceeds expectations.",
+      "Your imagination is our inspiration.",
     ],
   },
   {
@@ -39,8 +44,11 @@ const sections = [
     src: "/gallery/aerial-hoop.jpg",
     alt: "Aerial hoop artist performing above a crowded nightclub",
     paragraphs: [
-      "One team stays with you from the first conversation to the final night. Creative direction, casting, and production sit together, so the show you were promised is the show that arrives.",
-      "Guests may never see the planning. They feel it in the pace, the casting, and the sense that the evening was made for the room they are standing in.",
+      "From the first briefing to the final bow, Emerald Entertainment Group is committed to delivering an exceptional experience at every stage.",
+      "We pride ourselves on offering a personal, professional and seamless service, bringing together creative direction, exceptional performers, bespoke entertainment and expert event coordination.",
+      "Whether providing a single specialist act or producing an entire entertainment programme, our team takes care of the details so our clients can enjoy the experience with complete confidence.",
+      "Our commitment is simple: outstanding talent, extraordinary creativity and unforgettable entertainment, delivered with professionalism, personal connections and passion.",
+      "Extraordinary Entertainment. Every Occasion.",
     ],
   },
 ];
@@ -64,9 +72,9 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        eyebrow="About Us"
-        title="Our Vision"
-        subtitle="A house company for venues that want entertainment with a point of view, and the operational calm to deliver it night after night."
+        title="About Us"
+        subheading="Our Vision"
+        subtitle="At Emerald Entertainment Group, our vision is to redefine live entertainment through exceptional creativity, world-class talent and unforgettable experiences."
       />
 
       <div className="mx-auto flex max-w-6xl flex-col gap-20 px-6 py-20 lg:gap-28 lg:py-28">
